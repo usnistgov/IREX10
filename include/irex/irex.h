@@ -13,6 +13,7 @@
 #include <vector>
 #include <cstdint>
 #include <cmath>
+#include <memory>
 
 #include "irex/structs.h"
 
