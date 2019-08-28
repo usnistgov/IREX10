@@ -109,7 +109,7 @@ namespace Irex
           *                pass it to createDatabase() and possibly store it temporarily.
           * \return An object of type Irex::ReturnStatus.
           */
-         virtual ReturnStatus createTemplate(const std::vector<IrisImage>& irides,
+         virtual ReturnStatus createTemplate(std::vector<IrisImage>& irides,
                                              std::vector<uint8_t>& templateData,
                                              const TemplateType type) = 0;
 
