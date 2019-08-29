@@ -13,6 +13,7 @@
 #include <vector>
 #include <cstdint>
 #include <cmath>
+#include <memory>
 
 #include "irex/structs.h"
 
@@ -100,17 +101,14 @@ namespace Irex
           * Scenario 2 represents the most common operational use case and is likely to be the most
           * tested.
           *
-          * \param[in] type Create a search or enrollment template.
-          *
           * \param[in] irides The iris images from which to create the template.
           * \param[out] templateData Template generated from the iris samples. The template's
           *                format is proprietary and NIST will not access any part of it other to
           *                pass it to createDatabase() and possibly store it temporarily.
           * \return An object of type Irex::ReturnStatus.
           */
-         virtual ReturnStatus createTemplate(const std::vector<IrisImage>& irides,
-                                             std::vector<uint8_t>& templateData,
-                                             const TemplateType type) = 0;
+         virtual ReturnStatus createTemplate(std::vector<IrisImage>& irides,
+                                             std::vector<uint8_t>& templateData) = 0;
 
          /**
           * Function to create an enrollment database to search against.

@@ -112,11 +112,11 @@ $(document).ready(function(){initNavTree('class_irex_1_1_interface.html','');});
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af13397071abf1ecd239ddae40399f253"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_irex_1_1_return_status.html">ReturnStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_irex_1_1_interface.html#af13397071abf1ecd239ddae40399f253">initializeTemplateCreation</a> (const string &amp;configDirectory, const TemplateType type)=0</td></tr>
-<tr class="memdesc:af13397071abf1ecd239ddae40399f253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function, called once prior to one or more calls to <a class="el" href="class_irex_1_1_interface.html#a4c64b74c9c06ef13ae866fd92fed4d6e" title="Generates a template from a vector of iris images.">createTemplate()</a>.  <a href="#af13397071abf1ecd239ddae40399f253">More...</a><br /></td></tr>
+<tr class="memdesc:af13397071abf1ecd239ddae40399f253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization function, called once prior to one or more calls to <a class="el" href="class_irex_1_1_interface.html#a0c55368dbaafbcaa00726a8a63968ec2" title="Generates a template from a vector of iris images.">createTemplate()</a>.  <a href="#af13397071abf1ecd239ddae40399f253">More...</a><br /></td></tr>
 <tr class="separator:af13397071abf1ecd239ddae40399f253"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c64b74c9c06ef13ae866fd92fed4d6e"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_irex_1_1_return_status.html">ReturnStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_irex_1_1_interface.html#a4c64b74c9c06ef13ae866fd92fed4d6e">createTemplate</a> (const std::vector&lt; <a class="el" href="struct_irex_1_1_iris_image.html">IrisImage</a> &gt; &amp;irides, std::vector&lt; uint8_t &gt; &amp;templateData, const TemplateType type)=0</td></tr>
-<tr class="memdesc:a4c64b74c9c06ef13ae866fd92fed4d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a template from a vector of iris images.  <a href="#a4c64b74c9c06ef13ae866fd92fed4d6e">More...</a><br /></td></tr>
-<tr class="separator:a4c64b74c9c06ef13ae866fd92fed4d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c55368dbaafbcaa00726a8a63968ec2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_irex_1_1_return_status.html">ReturnStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_irex_1_1_interface.html#a0c55368dbaafbcaa00726a8a63968ec2">createTemplate</a> (std::vector&lt; <a class="el" href="struct_irex_1_1_iris_image.html">IrisImage</a> &gt; &amp;irides, std::vector&lt; uint8_t &gt; &amp;templateData)=0</td></tr>
+<tr class="memdesc:a0c55368dbaafbcaa00726a8a63968ec2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a template from a vector of iris images.  <a href="#a0c55368dbaafbcaa00726a8a63968ec2">More...</a><br /></td></tr>
+<tr class="separator:a0c55368dbaafbcaa00726a8a63968ec2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87aaeeb06a2d6f431250620cf63ca491"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="struct_irex_1_1_return_status.html">ReturnStatus</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_irex_1_1_interface.html#a87aaeeb06a2d6f431250620cf63ca491">createDatabase</a> (const string &amp;enrollmentDirectory, const string &amp;configDirectory, const std::vector&lt; <a class="el" href="struct_irex_1_1_database_entry.html">DatabaseEntry</a> &gt; &amp;templates)=0</td></tr>
 <tr class="memdesc:a87aaeeb06a2d6f431250620cf63ca491"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to create an enrollment database to search against.  <a href="#a87aaeeb06a2d6f431250620cf63ca491">More...</a><br /></td></tr>
 <tr class="separator:a87aaeeb06a2d6f431250620cf63ca491"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,9 +136,10 @@ static std::shared_ptr&lt; <a class="el" href="class_irex_1_1_interface.html">In
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Submitted libraries must override these functions. </p>
+
 <p>For an example of how to do this, see this <a href="https://github.com/usnistgov/IREX10/tree/1N/src/stub">dummy implementation</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="irex1_n_8h_source.html#l00051">51</a> of file <a class="el" href="irex1_n_8h_source.html">irex1N.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="irex_8h_source.html#l00050">50</a> of file <a class="el" href="irex_8h_source.html">irex.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="af13397071abf1ecd239ddae40399f253"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af13397071abf1ecd239ddae40399f253">&#9670;&nbsp;</a></span>initializeTemplateCreation()</h2>
@@ -174,7 +175,7 @@ static std::shared_ptr&lt; <a class="el" href="class_irex_1_1_interface.html">In
 </table>
 </div><div class="memdoc">
 
-<p>Initialization function, called once prior to one or more calls to <a class="el" href="class_irex_1_1_interface.html#a4c64b74c9c06ef13ae866fd92fed4d6e" title="Generates a template from a vector of iris images.">createTemplate()</a>. </p>
+<p>Initialization function, called once prior to one or more calls to <a class="el" href="class_irex_1_1_interface.html#a0c55368dbaafbcaa00726a8a63968ec2" title="Generates a template from a vector of iris images.">createTemplate()</a>. </p>
 <p>The implementation shall tolerate execution of multiple calls to this function from different processes running on the same machine. If participants wish to use the optional <em>configDirectory</em> parameter, they must say so in documentation accompanying their submission. NIST will debug if a call to this function returns a non-zero value, contacting the participant if necessary.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -187,8 +188,8 @@ static std::shared_ptr&lt; <a class="el" href="class_irex_1_1_interface.html">In
 
 </div>
 </div>
-<a id="a4c64b74c9c06ef13ae866fd92fed4d6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4c64b74c9c06ef13ae866fd92fed4d6e">&#9670;&nbsp;</a></span>createTemplate()</h2>
+<a id="a0c55368dbaafbcaa00726a8a63968ec2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c55368dbaafbcaa00726a8a63968ec2">&#9670;&nbsp;</a></span>createTemplate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,20 +200,14 @@ static std::shared_ptr&lt; <a class="el" href="class_irex_1_1_interface.html">In
         <tr>
           <td class="memname">virtual <a class="el" href="struct_irex_1_1_return_status.html">ReturnStatus</a> createTemplate </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="struct_irex_1_1_iris_image.html">IrisImage</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="struct_irex_1_1_iris_image.html">IrisImage</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>irides</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; uint8_t &gt; &amp;&#160;</td>
-          <td class="paramname"><em>templateData</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const TemplateType&#160;</td>
-          <td class="paramname"><em>type</em>&#160;</td>
+          <td class="paramname"><em>templateData</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -240,7 +235,6 @@ static std::shared_ptr&lt; <a class="el" href="class_irex_1_1_interface.html">In
 <p>For scenarios 2-4 the <code>eye</code> parameter for each <a class="el" href="struct_irex_1_1_iris_image.html" title="Holds image data for an iris.">IrisImage</a> in <code>irides</code> will always be set to either 1 (<em>left</em>) or 2 (<em>right</em>) and never 0 (<em>unknown</em> / <em>undefined</em>). Scenario 2 represents the most common operational use case and is likely to be the most tested.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Create a search or enrollment template.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">irides</td><td>The iris images from which to create the template. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">templateData</td><td>Template generated from the iris samples. The template's format is proprietary and NIST will not access any part of it other to pass it to <a class="el" href="class_irex_1_1_interface.html#a87aaeeb06a2d6f431250620cf63ca491" title="Function to create an enrollment database to search against.">createDatabase()</a> and possibly store it temporarily. </td></tr>
   </table>
@@ -396,7 +390,7 @@ static std::shared_ptr&lt; <a class="el" href="class_irex_1_1_interface.html">In
 <p>NIST will typically set the candidate list length to operationally feasible values (e.g. 20), but may decide to extend it to values that approach the size of the enrollment database.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">searchTemplate</td><td>A search template generated by a call to <a class="el" href="class_irex_1_1_interface.html#a4c64b74c9c06ef13ae866fd92fed4d6e" title="Generates a template from a vector of iris images.">createTemplate()</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">searchTemplate</td><td>A search template generated by a call to <a class="el" href="class_irex_1_1_interface.html#a0c55368dbaafbcaa00726a8a63968ec2" title="Generates a template from a vector of iris images.">createTemplate()</a>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">numCandidates</td><td>The length of the candidate list array to output. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">candidates</td><td>An array (of length <em>numCandidates</em>) of candidates. Each candidate shall be populated by the implementation and shall be sorted in ascending order of distance score (i. e. the most similar entry shall appear first). </td></tr>
   </table>
@@ -407,7 +401,7 @@ static std::shared_ptr&lt; <a class="el" href="class_irex_1_1_interface.html">In
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="irex1_n_8h_source.html">irex1N.h</a></li>
+<li><a class="el" href="irex_8h_source.html">irex.h</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
