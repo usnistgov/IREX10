@@ -10,5 +10,5 @@ validate: validate.cpp libIREX10.so
 	$(CXX) $(CXXFLAGS) -l IREX10 $^ -o $@
 
 clean:
-	rm -rf ./validate
+	rm -f ./validate
 

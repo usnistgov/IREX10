@@ -27,9 +27,8 @@ ReturnStatus Stub::initializeTemplateCreation(const string& configDir,
    return ReturnCode::Success;
 }
 
-ReturnStatus Stub::createTemplate(const vector<Irex::IrisImage>& irides,
-                                  vector<uint8_t>& templateData,
-                                  const Irex::TemplateType type)
+ReturnStatus Stub::createTemplate(vector<Irex::IrisImage>& irides,
+                                  vector<uint8_t>& templateData)
 {
    // Only use the first iris image.
    const Irex::IrisImage& iris = irides.front();

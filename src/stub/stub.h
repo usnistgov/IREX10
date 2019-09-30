@@ -9,7 +9,7 @@
 #ifndef STUB_H_
 #define STUB_H_
 
-#include "irex/irex1N.h"
+#include "irex/irex.h"
 
 using std::string;
 using std::vector;
@@ -24,9 +24,8 @@ class Stub : public Irex::Interface
       ReturnStatus initializeTemplateCreation(const string& configDir,
                                               const Irex::TemplateType type) override;
 
-      ReturnStatus createTemplate(const vector<Irex::IrisImage>& irides,
-                                  vector<uint8_t>& templateData,
-                                  const Irex::TemplateType type) override;
+      ReturnStatus createTemplate(vector<Irex::IrisImage>& irides,
+                                  vector<uint8_t>& templateData) override;
 
       ReturnStatus createDatabase(const string& enrollmentDirectory,
                                   const string& configDirectory,
