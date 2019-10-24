@@ -14,6 +14,7 @@
 #include <csignal>
 #include <sys/types.h>
 #include <sys/stat.h>
+#include <algorithm>
 
 const static int numCandidates = 10;
 
@@ -27,31 +28,30 @@ using ReturnCode = ReturnStatus::ReturnCode;
 using PixelFormat = IrisImage::PixelFormat;
 using Label = Irex::IrisImage::Label;
 
-// Global parameters you're welcome to change.
-const static string enrollDir = "./enrollDir",
-                    configDir = "./configDir";
+const static string enrollDir = "./enroll",
+                    configDir = "./config";
 
 const std::vector<string> enrollmentImages =
 {
-   "./images/enrollment0.pgm",
-   "./images/enrollment1.pgm",
-   "./images/enrollment2.pgm",
-   "./images/enrollment3.pgm",
-   "./images/enrollment4.pgm",
-   "./images/enrollment5.pgm",
-   "./images/enrollment6.pgm",
-   "./images/enrollment7.pgm",
-   "./images/enrollment8.pgm",
-   "./images/enrollment9.pgm"
+   "images/enrollment0.pgm",
+   "images/enrollment1.pgm",
+   "images/enrollment2.pgm",
+   "images/enrollment3.pgm",
+   "images/enrollment4.pgm",
+   "images/enrollment5.pgm",
+   "images/enrollment6.pgm",
+   "images/enrollment7.pgm",
+   "images/enrollment8.pgm",
+   "images/enrollment9.pgm"
 };
 
 const std::vector<string> searchImages =
 {
-   "./images/search0.pgm",
-   "./images/search1.pgm",
-   "./images/search2.pgm",
-   "./images/search3.ppm",
-   "./images/search4.ppm"
+   "images/search0.pgm",
+   "images/search1.pgm",
+   "images/search2.pgm",
+   "images/search3.ppm",
+   "images/search4.ppm"
 };
 
 /**
@@ -134,10 +134,10 @@ void createTemplates(const std::shared_ptr<Irex::Interface> implementation,
       IrisImage iris = readImage(imagePath);
       std::vector<IrisImage> irides(1, iris);
 
-      if (imagePath == "images/search3.pgm")
+      if (imagePath == "images/search3.ppm")
       {
          // Test two-eye support.
-         reverse(iris.data.begin(), iris.data.end());
+         std::reverse(iris.data.begin(), iris.data.end());
          irides.push_back(iris);
 
          // Eye labels must always be specified whenever more than one image is provided.
@@ -166,7 +166,7 @@ void createTemplates(const std::shared_ptr<Irex::Interface> implementation,
             raise(SIGTERM);
             
          default:
-            e.id = imagePath;
+            e.id = imagePath.substr( imagePath.find_last_of("/\\") + 1 );
             templates.push_back(e);
       }
    }
@@ -243,8 +243,10 @@ int main(int argc, char** argv)
 
       // Write candidates to standard output.
       for (const auto& c : candidates)
+      {
          cout << searchTemplate.id << " " << c.id << " " << c.distance << " "
               << static_cast<int>(ret.code) << endl;
+      }
 
    } // end foreach search
 

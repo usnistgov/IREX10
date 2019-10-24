@@ -69,7 +69,7 @@ namespace Irex
          RGB               ///< The image is RGB with with 24 bits per pixel
       };
 
-      /// Approximate location of the iris in an image
+      /// Approximate location of the iris in the image
       struct IrisAnnulus
       {
          /// Approximate horizontal center of the limbus in pixels (0=unspecified).
@@ -130,4 +130,4 @@ namespace Irex
 
 } /* end IREX namespace */
 
-#endif /* _IREX_H_ */
+#endif /* IREX_STRUCTS_H_ */
