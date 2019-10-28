@@ -1,0 +1,285 @@
+---
+title: "IREX 10 Identification Track"
+output:
+   bookdown::html_document2:
+      self_contained: yes
+      fig_caption: yes
+      theme: flatly
+      toc: yes
+      toc_depth: 3
+      toc_float:
+         collapsed: no
+      number_sections: false
+df_print: paged
+header-includes: \hypersetup{colorlinks=true, allbordercolors={0 0 0}, pdfborderstyle={/S/U/W1}}
+bibliography: irex10.bib
+link-citations: yes
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(irex10)
+library(DT)
+library(plotly)       # for interactive plots
+
+options(scipen = 9)   # prevent conversion of numbers to scientific notation.
+
+# Remove several modebar buttons from interactive plots.
+minimal <- function(g)
+              config(g, displaylogo = FALSE, # -GW collaborate = FALSE,
+                     modeBarButtonsToRemove = c("autoScale2d", "zoomIn2d", "zoomOut2d"))
+```
+
+```{r results="asis"}
+# -GW
+cat("
+<style>
+caption {
+      color: black;
+      font-weight: bold;
+      font-size: 1.0em;
+    }
+</style>
+")
+```
+
+<style type='text/css'>
+
+.main-container {
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dataTables_wrapper .dt-buttons {
+  float:none;  
+  top:6pt;
+  text-align:right;
+}
+
+</style>
+
+# Introduction
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, qui officia deserunt mollit anim id est laborum.
+
+# Use Cases
+
+Performance is measured for *one-to-many* (aka *identification mode*). This scenario involves searching an authentication template against a database of enrolled templates. Examples of one-to-many applications are watchlists and access control systems
+
+# Performance Metrics
+
+Biometrics are performed in a series of steps. An enrolled database is created. People are then searched against the enrolled database. Major steps are: template creation, their enrollment in the database, and searches against the database.
+
+Factors that impact the performance of a system are the time it takes to create a matchable template and the time it takes to search against the database. How frequently the correct person is found in the database as well as how frequently a person is correctly identified as *not* being enrolled.
+
+Offline testing cannot capture all aspects of a biometric system. Notably if a failure to acquire occurs a new sample cannot be acquired. Useability isn't tested. Purely technical.
+
+## Accuracy
+
+The degree of dissimilarity between two biometric templates is quantified by a dissimilarity score. In the case of John Daugman's IrisCode algorithm @1262028, the dissimilarity score is also known as a fractional Hamming Distance. A dissimilarity score is referred to as \emph{mated} if it is the result of comparing two templates representing the same iris (in the case of single-eye comparisons) or pair of irides (in the case of two-eye comparisons). It is known as a \emph{nonmated} score if it is the result of comparing templates representing different irides. An identity claim is accepted if the dissimilarity score is below (or equal to) a preset decision threshold. Otherwise, the identity claim is rejected. As with any binary classification problem, two types of decision errors are possible. The first occurs when a nonmated comparison is misclassified as mated. This is known as a \emph{false match}. The second type of decision error occurs when a mated comparison is misclassified as nonmated. This is known as a \emph{false nonmatch}.
+
+
+Adjusting the decision threshold reduces the rate of one type of error but at the expense of the other. This relationship is characterized by a DET curve @Martin97thedet, which plots the tradeoff between the two error rates. DET curves have become a standard in biometric testing, superseding the analogous ROC curve. Compared to ROC curves, the logarithmic axes of DET curves provide a superior view of the differences between matchers in the critical high performance region.
+
+Open-set biometric systems are tasked with searching a biometric sample against an enrollment database and returning zero or more candidates. A candidate is returned if the matcher determines that its dissimilarity to the searched image is at or below a preset decision threshold. A false positive occurs when a search returns a candidate for an individual that \emph{is not} enrolled in the database. A false negative occurs when a search \emph{does not} return the correct candidate for an individual that \emph{is} enrolled in the database. Brief definitions of the two opposing error rates are provided in Table \ref{tab:errorMetrics}. Raising the decision threshold increases the false negative identification rate (FNIR) but decreases the false positive identification rate (FPIR). Although the metrics do not strictly represent error rates in a binary classification system, core accuracy is still presented in the form of Detection Error Tradeoff (DET) plots, this time showing the tradeoff between  FPIR and FNIR.
+
+\begin{table}[H]
+	\def\arraystretch{1.5}
+	\centering \small
+	\begin{tabular}{|p{5.3cm}|p{7.0cm}|} \hline
+		\cellcolor{lightgray}{Metric} & \cellcolor{lightgray}{Definition} \\ \hline
+		False Negative Identification Rate (FNIR) & Fraction of mated searches that do not return the correct mate. \\ \hline
+		False Positive Identification Rate (FPIR) & Fraction of nonmated searches that return at least one (incorrect) candidate. \\ \hline
+	\end{tabular}
+	\caption[One-to-many error metrics]{\label{tab:errorMetrics} \it \small Informal definitions of the error metrics for a one-to-many iris recognition system.}
+\end{table}
+
+False positives are computed exclusively from non-mated searches (i.e. searches for which the searched individual is not enrolled in the database). This is more reflective of operation than if false positives had been computed from mated searches with the correct candidates removed from the list. Similarly, false negatives are computed exclusively from mated searches.
+
+
+------
+
+## Timing
+
+Timing statistics are presented as the actual physical time that elapsed for the operations of template creation and template comparison. Timing statistics are collected for single-threaded operations on otherwise unloaded machines. For ease of testing and fair comparison, submissions were required to operate in single-threaded mode. Operationally, software can be designed to exploit multiple cores when available to expedite template creation and comparison.
+
+Timing statistics are presented as the actual physical time that elapsed for the operations of template creation and template comparison. Timing statistics are collected for single-threaded operations on otherwise unloaded machines. For ease of testing and fair comparison, submissions were required to operate in single-threaded mode. Operationally, software can be designed to exploit multiple cores when available to expedite template creation and comparison.
+
+Timing statistics are presented as the actual physical time that elapsed for the operations of template creation and template comparison. Timing statistics are collected for single-threaded operations on otherwise unloaded machines. For ease of testing and fair comparison, submissions were required to operate in single-threaded mode. Operationally, software can be designed to exploit multiple cores when available to expedite template creation and comparison.
+
+------
+
+## Template Size
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, qui officia deserunt mollit anim id est laborum.
+
+------
+
+# Results 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, qui officia deserunt mollit anim id est laborum.
+
+
+## OPS 4
+
+### Leaderboard
+```{r Tables}
+# -GW confusion between descriptive and inferential statistics.
+test  <- "cmid620"
+FPIR  <- 1e-2
+alpha <- 0.05
+
+# Get FNIR and confidence interval for each matcher.
+table <- irex10[test, wilson.interval(test, participant, FPIR, alpha), by = participant]
+
+# Sort rows by FNIR.
+#setorder(table, FNIR)
+
+# Make the FNIR text look nice.
+#table <- table[,.(FNIR = aesthetic.text(FNIR, (upper - lower) / 2)), by = participant]
+
+# Get template statistics and format.
+#table <- table[,with(get.template.stats(test, participant),
+#                     .(creation.time = aesthetic.text(creation.time),
+#                       num.bytes     = aesthetic.text(num.bytes)))
+#               ,by = names(table)]
+
+# Get search statistics and format.
+#table <- table[,with(get.search.stats(test, participant),
+#                     .(search.time = aesthetic.text(search.time),
+#                       fte.rate    = aesthetic.text(return.value != "Success")))
+#               , by = names(table)]
+
+# Format submission date.
+#table[irex10, date := aesthetic.date(submission.date), on = "participant"]
+
+# Change names of columns.
+#FNIR.name <- paste0("FNIR @ FPIR=10<sup>", log10(FPIR), "</sup>")
+
+#setnames(table, c("Matcher", FNIR.name, "Template Creation Time (s)", "Template Size (b)", 
+#                  "Search Time (s)", "FTE Rate", "Submission Date"))
+
+# Display table.
+#datatable(table, list(dom = "tB", buttons = c('csv', 'pdf', 'print')),
+#          caption = get.caption(test), extensions = 'Buttons', escape = FALSE, rownames = FALSE) %>%
+#   formatStyle(colnames(table), 'text-align' = 'center', fontSize = '90%')
+```
+
+### Accuracy
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, qui officia deserunt mollit anim id est laborum.
+
+```{r DET Plots, fig.width = 8 }
+
+# Load DET results.
+DETs <- irex10[test == "Multispectral Visible Wavelength"]
+DETs <- irex10[,load.DET(test, participant), by = .(test, participant)]
+
+# Plot DETs.
+setkey(DETs, "participant")
+g <- plot.DET(DETs, FMR.sort = 1e-2, prepend.FNMR = TRUE)
+
+# What to show during mousovers.
+g <- g + aes(text = paste(sub(".*) ", "", label),
+                          "<BR>FNIR =", round(FNMR, 4),
+                          "<BR>FPIR =", round(FMR, 4)), group = 1) +
+     theme(plot.title = element_text(size = 12)) +
+     ggtitle(get.caption(first(DETs$test)))
+
+# Remove several buttons
+layout(minimal(ggplotly(g, tooltip = "text", margin = list(top = 80))))
+```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, qui officia deserunt mollit anim id est laborum.
+
+```{r Accuracy Boxplots, fig.height = 0.5 + 0.8 * length(matchers) }
+
+test  <- "Multispectral Visible Wavelength"
+FPIR  <- 1e-2          # get FNIR at this FPIR
+alpha <- 0.05          # for confidence intervals
+
+# Get FNIR and confidence interval for each matcher.
+boxes <- irex10[test, wilson.interval(test, participant, FPIR, alpha), by = participant]
+
+# Sort rows by FNIR.
+setorder(boxes, FNIR)
+
+# Construct plotting object.
+g <- boxplot.FNIR(boxes) +
+     ggtitle(get.caption(test))
+ 
+layout(minimal(ggplotly(g, tooltip = "text")))
+```
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, qui officia deserunt mollit anim id est laborum.
+
+```{r accuracyTable, results="asis"}
+
+test  <- "Multispectral Visible Wavelength"
+FPIRs <- 10^-(1:3)                              # compute FNIR at these FPIRs.
+alpha <- 0.05
+
+# Get FNIR range for each matcher.
+table <- irex10[test,with( wilson.interval(test, participant, FPIRs, alpha),
+                           .(FNIR = aesthetic.text(FNIR, (upper - lower) / 2), FPIR = FPIRs) ),
+                ,by = participant]
+
+# Restructure such that each FPIR has its own column.
+table <- dcast(table, participant ~ FPIR, value.var = "FNIR")
+
+# Get submission date.
+table[irex10, date := aesthetic.date(submission.date), on = "participant"]
+
+# Order rows by FNIR of the matchers.
+setorderv(table, as.character(FPIRs))
+
+# Change names of columns.
+setnames(table, c("Matcher", sprintf("FNIR @ FPIR=10<sup>%d</sup>", log10(FPIRs)),
+                  "Submission Date"))
+
+# Display the table.
+datatable(table, list(dom = 'tB', buttons = c('csv', 'pdf', 'print')),
+          caption = get.caption(test), extensions = 'Buttons', escape = FALSE, rownames = FALSE) %>%
+   formatStyle(colnames(table), 'text-align' = 'center', fontSize = '90%')
+```
+
+
+### Left vs. Right Eye
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, qui officia deserunt mollit anim id est laborum.
+
+```{r Accuracy Boxplots Eye Label, fig.height = 0.5 + 1.2 * length(matchers) }
+
+test  <- "Multispectral Visible Wavelength"
+FPIR  <- 1e-2          # get FNIR at this FPIR
+alpha <- 0.05          # for confidence intervals
+
+# Get separate confidence intervals for left and right eyes.
+boxes <- irex10[,.(eye = c("L", "R")), by = participant]
+
+# Get confidence interval for each matcher and eye.
+boxes <- boxes[,wilson.interval(file.path(test, "eye", eye), participant, FPIR, alpha), 
+               by = .(participant, eye)]
+
+# Sort rows by FNIR.
+setorder(boxes, FNIR)
+
+# Plot boxplots for each test.
+g <- boxplot.FNIR(boxes, c("participant", "eye")) +
+     ggtitle(get.caption(test))
+
+layout(minimal(ggplotly(g, tooltip = "text")))
+```
+
+------
+
+```{r, include = FALSE}
+# You need this code to conduct the magic dependences attaching... -GW
+DT::datatable(matrix())
+```
+
+
+# References
+

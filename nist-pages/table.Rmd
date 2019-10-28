@@ -1,0 +1,81 @@
+---
+title: "Table Example"
+output:
+   bookdown::html_document2:
+      self_contained: yes
+      fig_caption: yes
+      theme: flatly
+      toc: yes
+      toc_depth: 3
+      toc_float:
+         collapsed: no
+      number_sections: false
+---
+
+```{r setup, include = FALSE}
+#knitr::opts_chunk$set(echo = FALSE)
+
+library(data.table)   # for data.table objects
+library(DT)           # for datatable objects
+library(plotly)       # for interactive plots
+
+options(scipen = 9, stringsAsFactors = FALSE)
+```
+
+<style type='text/css'>
+
+<!-- Sets table caption font style -->
+caption
+{
+   color: black;
+   font-weight: bold;
+   font-size: 1.0em;
+}
+
+<!-- Defines the location and padding for table buttons -->
+.dataTables_wrapper .dt-buttons {
+  float:none;  
+  top:1000000pt;
+  text-align:right;
+}
+
+</style>
+
+# Introduction
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, qui officia deserunt mollit anim id est laborum.
+
+------
+
+## Tables
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, qui officia deserunt mollit anim id est laborum.
+
+```{r, include = FALSE}
+# You need this code to conduct the magic dependences attaching... -GW
+#DT::datatable(matrix())
+```
+
+```{r RchunkTitle}
+
+# This R code is displayed in the document because I didn't add
+# "include = FALSE" as a paramter in the above.
+
+# Create fake table data.
+table.data <- data.frame(Matcher = paste0("matcher", LETTERS[1:6]),
+                         FNIR    = signif(10 ^ -(4 + rnorm(6)), 2))
+
+# Sort rows by FNIR.
+table.data <- table.data[order(table.data$FNIR),]
+
+# Display the table.
+# NOTE: 'tb' places buttons below table ('bt' flips their order).
+# NOTE: The final 'formatStyle' call shrinks the column name text.
+# NOTE: %>% is an offensive operator defined in the 'magrittr' package
+#       that allows you to daisychain function calls together. I try to
+#       avoid it.
+datatable(table.data, list(dom = 'tB', buttons = c('csv', 'pdf', 'print')),
+          caption = "Leaderboard", extensions = 'Buttons', escape = FALSE,
+          rownames = FALSE) %>%
+formatStyle(colnames(table), 'text-align' = 'center', fontSize = '90%')
+```
