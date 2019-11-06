@@ -15,6 +15,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <algorithm>
+#include <dirent.h>
 
 const static int numCandidates = 10;
 
@@ -30,29 +31,6 @@ using Label = Irex::IrisImage::Label;
 
 const static string enrollDir = "./enroll",
                     configDir = "./config";
-
-const std::vector<string> enrollmentImages =
-{
-   "images/enrollment0.pgm",
-   "images/enrollment1.pgm",
-   "images/enrollment2.pgm",
-   "images/enrollment3.pgm",
-   "images/enrollment4.pgm",
-   "images/enrollment5.pgm",
-   "images/enrollment6.pgm",
-   "images/enrollment7.pgm",
-   "images/enrollment8.pgm",
-   "images/enrollment9.pgm"
-};
-
-const std::vector<string> searchImages =
-{
-   "images/search0.pgm",
-   "images/search1.pgm",
-   "images/search2.pgm",
-   "images/search3.ppm",
-   "images/search4.ppm"
-};
 
 /**
  * Creates an iris_image from a PPM or PGM file.
@@ -132,24 +110,27 @@ void createTemplates(const std::shared_ptr<Irex::Interface> implementation,
    for (const auto imagePath : imagePaths)
    {
       IrisImage iris = readImage(imagePath);
-      std::vector<IrisImage> irides(1, iris);
 
-      if (imagePath == "images/search3.ppm")
-      {
-         // Test two-eye support.
-         std::reverse(iris.data.begin(), iris.data.end());
-         irides.push_back(iris);
-
-         // Eye labels must always be specified whenever more than one image is provided.
-         irides.front().label = irides.back().label = Label::LeftIris;
-      }
-      else if (imagePath == "images/enrollment8.pgm")
+      if (imagePath == "images/enrollment8.pgm")
       {
          // Provide iris coordinates.
          iris.location.limbusCenterX = 320;
          iris.location.limbusCenterY = 240;
          iris.location.limbusRadius  = 119;
          iris.location.pupilRadius   = 38;
+      }
+
+      std::vector<IrisImage> irides(1, iris);
+
+      if (imagePath == "images/search1.pgm")
+      {
+         // Test two-eye support.
+         std::reverse(iris.data.begin(), iris.data.end());
+         irides.push_back(iris);
+
+         // Eye labels must always be specified whenever more than one image is provided.
+         irides.front().label = Label::LeftIris;
+         irides.back().label = Label::RightIris;
       }
 
       Irex::DatabaseEntry e;
@@ -195,6 +176,32 @@ int main(int argc, char** argv)
       cerr << enrollDir << " is not a directory" << endl;
       raise(SIGTERM);
    }
+
+   std::vector<string> searchImages,
+                       enrollmentImages;
+
+   // Get list of search and enroll images.
+   DIR* dir;
+
+   if ((dir = opendir ("./images/")) == NULL)
+   {
+      cerr << "Can't read images directory" << endl;
+      return EXIT_FAILURE;
+   }
+
+   struct dirent *entry;
+
+   while ((entry = readdir (dir)) != NULL)
+   {
+      const std::string filename(entry->d_name);
+
+      if (filename.rfind("search", 0) == 0)
+         searchImages.push_back("./images/" + filename);
+      else if (filename.rfind("enroll", 0) == 0)
+         enrollmentImages.push_back("./images/" + filename);
+   }
+
+   closedir(dir);
 
    std::shared_ptr<Irex::Interface> implementation = Irex::Interface::getImplementation();
 
