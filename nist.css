@@ -312,6 +312,17 @@ html {
    opacity:1;
 }
 
+.nist-social--instagram-gray {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/linkedin.svg);
+   opacity:.4;
+}
+
+.nist-social--instagram-gray:focus,.nist-social--instagram-gray:hover {
+   background-color:#2d9de7;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/instagram_white.svg);
+   opacity:1;
+}
+
 .nist-social--youtube {
    background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/youtube.svg);
 }
@@ -331,6 +342,17 @@ html {
    opacity:1;
 }
 
+.nist-social--youtube-gray {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/youtube.svg);
+   opacity:.4;
+}
+
+.nist-social--youtube-gray:focus,.nist-social--youtube-gray:hover {
+   background-color:#2d9de7;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/youtube_white.svg);
+   opacity:1;
+}
+
 .nist-social--rss {
    background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/rss.svg);
 }
@@ -346,6 +368,17 @@ html {
 
 .nist-social--rss-white:focus,.nist-social--rss-white:hover {
    background-color:#f99007;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/rss_white.svg);
+   opacity:1;
+}
+
+.nist-social--rss-gray {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/rss.svg);
+   opacity:.4;
+}
+
+.nist-social--rss-gray:focus,.nist-social--rss-gray:hover {
+   background-color:#2d9de7;
    background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/rss_white.svg);
    opacity:1;
 }
@@ -395,6 +428,17 @@ html {
 
 .nist-social--flickr-white:focus,.nist-social--flickr-white:hover {
    background-color:#0063dc;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/flickr_white.svg);
+   opacity:1;
+}
+
+.nist-social--flickr-gray {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/flickr.svg);
+   opacity:.4;
+}
+
+.nist-social--flickr-gray:focus,.nist-social--flickr-gray:hover {
+   background-color:#b3b3b3;
    background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/flickr_white.svg);
    opacity:1;
 }
