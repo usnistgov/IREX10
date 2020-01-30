@@ -42,7 +42,10 @@ H2 {
    font-style:normal;
    font-weight:400;
    font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-light-webfont.woff2) format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-regular-webfont.woff) format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-regular-webfont.ttf) format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-light-webfont.woff2)
+       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-regular-webfont.woff)
+       format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-regular-webfont.ttf)
+       format("truetype");
 }
 
 @font-face {
@@ -50,7 +53,10 @@ H2 {
    font-style:normal;
    font-weight:699;
    font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.woff2) format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.woff) format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.ttf) format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.woff2)
+       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.woff)
+       format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.ttf)
+       format("truetype");
 }
 
 @font-face {
@@ -58,7 +64,10 @@ H2 {
    font-style:italic;
    font-weight:400;
    font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.woff2) format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.woff) format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.ttf) format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.woff2)
+       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.woff)
+       format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.ttf)
+       format("truetype");
 }
 
 @font-face {
@@ -66,7 +75,10 @@ H2 {
    font-style:italic;
    font-weight:600;
    font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.woff2) format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.woff) format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.ttf) format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.woff2)
+       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.woff)
+       format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.ttf)
+       format("truetype");
 }
 
 @font-face {
@@ -74,7 +86,10 @@ H2 {
    font-style:italic;
    font-weight:700;
    font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.woff2) format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.woff) format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.ttf) format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.woff2)
+       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.woff)
+       format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.ttf)
+       format("truetype");
 }
 
 @font-face {
@@ -82,7 +97,10 @@ H2 {
    font-style:normal;
    font-weight:300;
    font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.woff2) format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.woff) format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.ttf) format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.woff2)
+       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.woff)
+       format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.ttf)
+       format("truetype");
 }
 
 /* -GW repeats? */
@@ -91,7 +109,10 @@ H2 {
    font-style:normal;
    font-weight:400;
    font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.woff2) format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.woff) format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.ttf) format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.woff2)
+       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.woff)
+       format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.ttf)
+       format("truetype");
 }
 
 @font-face {
@@ -99,7 +120,10 @@ H2 {
    font-style:normal;
    font-weight:700;
    font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Bold.woff2) format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Bold.woff) format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Bold.ttf) format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Bold.woff2)
+       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Bold.woff)
+       format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Bold.ttf)
+       format("truetype");
 }
 
 @font-face {
@@ -107,7 +131,9 @@ H2 {
    font-style:italic;
    font-weight:400;
    font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Italic.woff2) format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Italic.woff) format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Italic.ttf) format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Italic.woff2)
+       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Italic.woff)
+       format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Italic.ttf) format("truetype");
 }
 
 @font-face {
@@ -115,7 +141,10 @@ H2 {
    font-style:italic;
    font-weight:700;
    font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-BoldItalic.woff2) format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-BoldItalic.woff) format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-BoldItalic.ttf) format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-BoldItalic.woff2)
+       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-BoldItalic.woff)
+       format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-BoldItalic.ttf)
+       format("truetype");
 }
 
 /* Overall properties of the header */
@@ -140,7 +169,6 @@ H2 {
    text-align:center;
    width:80px;
 }
-
 
 .nist-social {
    background-position:50%;
