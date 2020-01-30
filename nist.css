@@ -1,26 +1,26 @@
 
+/* https://www.nist.gov/sites/default/files/css/css_EpUc2ZbMY-_qAzAfYsfXQ80Urq8ndr3n7-KNsx11xLc.css?q4w175 */
+
 * {-webkit-font-smoothing: antialiased;}
 
-/* Pulled from URL below on Nov 25th, 2019.
-   https://www.nist.gov/sites/default/files/css/css_upsjsFTrh_luQ_mkVG8bvtY6hJP2qeBdVsxUinYrGlI.css */
-BODY
-{
+BODY {
    line-height:1.52155;
    font-family:Source Sans Pro Web,Helvetica Neue,Helvetica;
    padding-right: 20px;
    padding-left: 20px;
 }
 
-H1,H2,H3,H4,H5,H6 { line-height:1.12707; font-weight:700; font-stretch:semi-condensed; }
+H1,H2,H3,H4,H5,H6 {
+   line-height:1.12707; font-weight:700; font-stretch:semi-condensed;
+}
+
 H1 { font-size:2.66176rem; }
-H2 { font-size:1.86324rem; }
+H2 { font-size:1.86324rem; } /* -GW repeate? */
 H3 { font-size:1.46397rem; }
 H4 { font-size:1.06471rem; }
 H5 { font-size:0.99816rem; }
 
-/* Removed 'text-transform:uppercase;' */
-H2
-{
+H2 {
    font-size:1.6rem;
    border-bottom:2px solid #005ea2;
    font-weight:400;
@@ -30,124 +30,118 @@ H2
    clear:both;
 }
 
-@font-face
-{
-   font-family:Source Sans Pro Web;font-style:normal;font-weight:400;font-display:fallback;
-   src:url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-regular-webfont.woff2)
-      format("woff2"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-regular-webfont.woff)
-      format("woff"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-regular-webfont.ttf)
-      format("truetype");
-}
-
-@font-face
-{
+@font-face {
    font-family:Source Sans Pro Web;
    font-style:normal;
-   font-weight:700;
+   font-weight:400;
    font-display:fallback;
-   src:url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-bold-webfont.woff2)
-      format("woff2"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-bold-webfont.woff)
-      format("woff"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-bold-webfont.ttf)
-      format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-light-webfont.woff2)
+   format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-regular-webfont.woff)
+   format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-regular-webfont.ttf)
+   format("truetype");
 }
 
-@font-face
-{
+@font-face {
+   font-family:Source Sans Pro Web;
+   font-style:normal;
+   font-weight:699;
+   font-display:fallback;
+   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.woff2)
+   format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.woff)
+   format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.ttf)
+   format("truetype");
+}
+
+@font-face {
    font-family:Source Sans Pro Web;
    font-style:italic;
    font-weight:400;
    font-display:fallback;
-   src:url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-italic-webfont.woff2)
-      format("woff2"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-italic-webfont.woff)
-      format("woff"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-italic-webfont.ttf)
-      format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.woff2)
+   format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.woff)
+   format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.ttf)
+   format("truetype");
 }
 
-@font-face
-{
+@font-face {
    font-family:Source Sans Pro Web;
    font-style:italic;
    font-weight:600;
    font-display:fallback;
-   src:url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-semibolditalic-webfont.woff2)
-      format("woff2"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-semibolditalic-webfont.woff)
-      format("woff"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-semibolditalic-webfont.ttf)
-      format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.woff2)
+   format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.woff)
+   format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.ttf)
+   format("truetype");
 }
 
-@font-face
-{
+@font-face {
    font-family:Source Sans Pro Web;
    font-style:italic;
    font-weight:700;
    font-display:fallback;
-   src:url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-bolditalic-webfont.woff2)
-      format("woff2"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-bolditalic-webfont.woff)
-      format("woff"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/source-sans-pro/sourcesanspro-bolditalic-webfont.ttf)
-      format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.woff2)
+   format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.woff)
+   format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.ttf)
+   format("truetype");
 }
 
-@font-face
-{
+@font-face {
    font-family:Merriweather Web;
    font-style:normal;
    font-weight:300;
    font-display:fallback;
-   src:url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Light.woff2)
-      format("woff2"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Light.woff)
-      format("woff"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Light.ttf)
-      format("truetype");
-}
-
-@font-face
-{
-   font-family:Merriweather Web;
-   font-style:normal;
-   font-weight:400;
-   font-display:fallback;
-   src:url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Regular.woff2)
-      format("woff2"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Regular.woff)
-      format("woff"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Regular.ttf)
-      format("truetype");
-}
-
-@font-face
-{
-   font-family:Merriweather Web;
-   font-style:normal;
-   font-weight:700;
-   font-display:fallback;
-   src:url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Bold.woff2)
-      format("woff2"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Bold.woff)
-      format("woff"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Bold.ttf)
-      format("truetype");
-}
-
-@font-face
-{
-   font-family:Merriweather Web;
-   font-style:italic;
-   font-weight:400;
-   font-display:fallback;
-   src:url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Italic.woff2)
-   format("woff2"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Italic.woff)
-   format("woff"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-Italic.ttf)
+   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.woff2)
+   format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.woff)
+   format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.ttf)
    format("truetype");
 }
 
-@font-face
-{
+/* -GW repeats? */
+@font-face {
+   font-family:Merriweather Web;
+   font-style:normal;
+   font-weight:400;
+   font-display:fallback;
+   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.woff2)
+   format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.woff)
+   format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.ttf)
+   format("truetype");
+}
+
+@font-face {
+   font-family:Merriweather Web;
+   font-style:normal;
+   font-weight:700;
+   font-display:fallback;
+   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Bold.woff2)
+   format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Bold.woff)
+   format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Bold.ttf)
+   format("truetype");
+}
+
+@font-face {
+   font-family:Merriweather Web;
+   font-style:italic;
+   font-weight:400;
+   font-display:fallback;
+   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Italic.woff2)
+   format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Italic.woff)
+   format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Italic.ttf)
+   format("truetype");
+}
+
+@font-face {
    font-family:Merriweather Web;
    font-style:italic;
    font-weight:700;
    font-display:fallback;
-   src:url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-BoldItalic.woff2)
-      format("woff2"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-BoldItalic.woff)
-      format("woff"),url(http://www.nist.gov/themes/custom/nist/dist/fonts/merriweather/Latin-Merriweather-BoldItalic.ttf)
-      format("truetype");
+   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-BoldItalic.woff2)
+   format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-BoldItalic.woff)
+   format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-BoldItalic.ttf)
+   format("truetype");
 }
 
-html{
+html {
    font-family:sans-serif;
    -ms-text-size-adjust:100%;
    -webkit-text-size-adjust:100%;
@@ -155,14 +149,12 @@ html{
 
 
 /* Overall properties of the header */
-.nist-header
-{
+.nist-header {
    background-color:#000000;
    padding:10px;
 }
 
-.usa-button
-{
+.usa-button {
    font-size:0.95rem;
    font-weight:600;
    background-color:#008817;
@@ -180,8 +172,7 @@ html{
 }
 
 
-.nist-social
-{
+.nist-social {
    background-position:50%;
    background-repeat:no-repeat;
    background-size:auto 30px;
@@ -193,16 +184,233 @@ html{
 }
 
 /* Social media buttons */
-.nist-social{margin-bottom:.5rem;margin-top:.5rem;background-position:50%;background-repeat:no-repeat;background-size:auto 30px;display:inline-block;height:44px;position:relative;text-align:center;width:44px;float:right;}.nist-social span{position:absolute;left:-999em;}
-.nist-social--twitter{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/twitter.svg);}.nist-social--twitter:focus,.nist-social--twitter:hover{background-color:#49c9f2;opacity:1;}.nist-social--twitter-white,.nist-social--twitter:focus,.nist-social--twitter:hover{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/twitter_white.svg);}.nist-social--twitter-white:focus,.nist-social--twitter-white:hover{background-color:#49c9f2;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/twitter_white.svg);opacity:1;}.nist-social--twitter-gray{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/twitter.svg);opacity:.4;}.nist-social--twitter-gray:focus,.nist-social--twitter-gray:hover{background-color:#49c9f2;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/twitter_white.svg);opacity:1;}.nist-social--facebook{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/facebook.svg);}.nist-social--facebook:focus,.nist-social--facebook:hover{background-color:#3a5897;opacity:1;}.nist-social--facebook-white,.nist-social--facebook:focus,.nist-social--facebook:hover{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/facebook_white.svg);}.nist-social--facebook-white:focus,.nist-social--facebook-white:hover{background-color:#3a5897;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/facebook_white.svg);opacity:1;}.nist-social--facebook-gray{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/facebook.svg);opacity:.4;}.nist-social--facebook-gray:focus,.nist-social--facebook-gray:hover{background-color:#3a5897;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/facebook_white.svg);opacity:1;}.nist-social--linkedin{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/linkedin.svg);}.nist-social--linkedin:focus,.nist-social--linkedin:hover{background-color:#2d9de7;opacity:1;}.nist-social--linkedin-white,.nist-social--linkedin:focus,.nist-social--linkedin:hover{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/linkedin_white.svg);}.nist-social--linkedin-white:focus,.nist-social--linkedin-white:hover{background-color:#2d9de7;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/linkedin_white.svg);opacity:1;}.nist-social--linkedin-gray{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/linkedin.svg);opacity:.4;}.nist-social--linkedin-gray:focus,.nist-social--linkedin-gray:hover{background-color:#2d9de7;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/linkedin_white.svg);opacity:1;}.nist-social--instagram{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/instagram.svg);}.nist-social--instagram:focus,.nist-social--instagram:hover{background-color:#8a3ab9;opacity:1;}.nist-social--instagram-white,.nist-social--instagram:focus,.nist-social--instagram:hover{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/instagram_white.svg);}.nist-social--instagram-white:focus,.nist-social--instagram-white:hover{background-color:#8a3ab9;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/instagram_white.svg);opacity:1;}.nist-social--youtube{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/youtube.svg);}.nist-social--youtube:focus,.nist-social--youtube:hover{background-color:#e52d27;opacity:1;}.nist-social--youtube-white,.nist-social--youtube:focus,.nist-social--youtube:hover{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/youtube_white.svg);}.nist-social--youtube-white:focus,.nist-social--youtube-white:hover{background-color:#e52d27;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/youtube_white.svg);opacity:1;}.nist-social--rss{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/rss.svg);}.nist-social--rss:focus,.nist-social--rss:hover{background-color:#f99007;opacity:1;}.nist-social--rss-white,.nist-social--rss:focus,.nist-social--rss:hover{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/rss_white.svg);}.nist-social--rss-white:focus,.nist-social--rss-white:hover{background-color:#f99007;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/rss_white.svg);opacity:1;}.nist-social--envelope{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/envelope.svg);}.nist-social--envelope:focus,.nist-social--envelope:hover{background-color:#b3b3b3;opacity:1;}.nist-social--envelope-white,.nist-social--envelope:focus,.nist-social--envelope:hover{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/envelope_white.svg);}.nist-social--envelope-white:focus,.nist-social--envelope-white:hover{background-color:#b3b3b3;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/envelope_white.svg);opacity:1;}.nist-social--envelope-gray{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/envelope.svg);opacity:.4;}.nist-social--envelope-gray:focus,.nist-social--envelope-gray:hover{background-color:#b3b3b3;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/envelope_white.svg);opacity:1;}.nist-social--flickr{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/flickr.svg);}.nist-social--flickr:focus,.nist-social--flickr:hover{background-color:#0063dc;opacity:1;}.nist-social--flickr-white,.nist-social--flickr:focus,.nist-social--flickr:hover{background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/flickr_white.svg);}.nist-social--flickr-white:focus,.nist-social--flickr-white:hover{background-color:#0063dc;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/flickr_white.svg);opacity:1;}
-.nist-social__wrapper--block .nist-social--twitter
-   {background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/twitter_white.svg);}
-.nist-social__wrapper--block .nist-social--twitter:focus,.nist-social__wrapper--block .nist-social--twitter:hover
-   {background-color:#49c9f2;background-image:url(http://www.nist.gov/libraries/nist-component-library/dist/img/social-icons/twitter_white.svg);opacity:1;}
+.nist-social {
+   margin-bottom:.5rem;
+   margin-top:.5rem;
+   background-position:50%;
+   background-repeat:no-repeat;
+   background-size:auto 30px;
+   display:inline-block;
+   height:44px;
+   position:relative;
+   text-align:center;
+   width:44px;
+   float:right;
+}
+
+.nist-social span {
+   position:absolute;
+   left:-999em;
+}
+
+.nist-social--twitter {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/twitter.svg);
+}
+
+.nist-social--twitter:focus,.nist-social--twitter:hover {
+   background-color:#49c9f2;
+   opacity:1;
+}
+
+.nist-social--twitter-white,.nist-social--twitter:focus,.nist-social--twitter:hover {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/twitter_white.svg);
+}
+
+.nist-social--twitter-white:focus,.nist-social--twitter-white:hover {
+   background-color:#49c9f2;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/twitter_white.svg);
+   opacity:1;
+}
+
+.nist-social--twitter-gray {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/twitter.svg);
+   opacity:.4;
+}
+
+.nist-social--twitter-gray:focus,.nist-social--twitter-gray:hover {
+   background-color:#49c9f2;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/twitter_white.svg);
+   opacity:1;
+}
+
+.nist-social--facebook {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/facebook.svg);
+}
+
+.nist-social--facebook:focus,.nist-social--facebook:hover {
+   background-color:#3a5897;
+   opacity:1;
+}
+
+.nist-social--facebook-white,.nist-social--facebook:focus,.nist-social--facebook:hover {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/facebook_white.svg);
+}
+
+.nist-social--facebook-white:focus,.nist-social--facebook-white:hover {
+   background-color:#3a5897;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/facebook_white.svg);
+   opacity:1;
+}
+
+.nist-social--facebook-gray {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/facebook.svg);
+   opacity:.4;
+}
+
+.nist-social--facebook-gray:focus,.nist-social--facebook-gray:hover {
+   background-color:#3a5897;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/facebook_white.svg);
+   opacity:1;
+}
+
+.nist-social--linkedin {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/linkedin.svg);
+}
+
+.nist-social--linkedin:focus,.nist-social--linkedin:hover {
+   background-color:#2d9de7;
+   opacity:1;
+}
+
+.nist-social--linkedin-white,.nist-social--linkedin:focus,.nist-social--linkedin:hover {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/linkedin_white.svg);
+}
+
+.nist-social--linkedin-white:focus,.nist-social--linkedin-white:hover {
+   background-color:#2d9de7;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/linkedin_white.svg);
+   opacity:1;
+}
+
+.nist-social--linkedin-gray {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/linkedin.svg);
+   opacity:.4;
+}
+
+.nist-social--linkedin-gray:focus,.nist-social--linkedin-gray:hover {
+   background-color:#2d9de7;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/linkedin_white.svg);
+   opacity:1;
+}
+
+.nist-social--instagram {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/instagram.svg);
+}
+
+.nist-social--instagram:focus,.nist-social--instagram:hover {
+   background-color:#8a3ab9;
+   opacity:1;
+}
+
+.nist-social--instagram-white,.nist-social--instagram:focus,.nist-social--instagram:hover {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/instagram_white.svg);
+}
+
+.nist-social--instagram-white:focus,.nist-social--instagram-white:hover {
+   background-color:#8a3ab9;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/instagram_white.svg);
+   opacity:1;
+}
+
+.nist-social--youtube {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/youtube.svg);
+}
+
+.nist-social--youtube:focus,.nist-social--youtube:hover {
+   background-color:#e52d27;
+   opacity:1;
+}
+
+.nist-social--youtube-white,.nist-social--youtube:focus,.nist-social--youtube:hover {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/youtube_white.svg);
+}
+
+.nist-social--youtube-white:focus,.nist-social--youtube-white:hover {
+   background-color:#e52d27;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/youtube_white.svg);
+   opacity:1;
+}
+
+.nist-social--rss {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/rss.svg);
+}
+
+.nist-social--rss:focus,.nist-social--rss:hover {
+   background-color:#f99007;
+   opacity:1;
+}
+
+.nist-social--rss-white,.nist-social--rss:focus,.nist-social--rss:hover {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/rss_white.svg);
+}
+
+.nist-social--rss-white:focus,.nist-social--rss-white:hover {
+   background-color:#f99007;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/rss_white.svg);
+   opacity:1;
+}
+
+.nist-social--envelope {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/envelope.svg);
+}
+
+.nist-social--envelope:focus,.nist-social--envelope:hover {
+   background-color:#b3b3b3;
+   opacity:1;
+}
+
+.nist-social--envelope-white,.nist-social--envelope:focus,.nist-social--envelope:hover {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/envelope_white.svg);
+}
+
+.nist-social--envelope-white:focus,.nist-social--envelope-white:hover {
+   background-color:#b3b3b3;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/envelope_white.svg);
+   opacity:1;
+}
+
+.nist-social--envelope-gray {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/envelope.svg);
+   opacity:.4;
+}
+
+.nist-social--envelope-gray:focus,.nist-social--envelope-gray:hover {
+   background-color:#b3b3b3;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/envelope_white.svg);
+   opacity:1;
+}
+
+.nist-social--flickr {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/flickr.svg);
+}
+
+.nist-social--flickr:focus,.nist-social--flickr:hover {
+   background-color:#0063dc;
+   opacity:1;
+}
+
+.nist-social--flickr-white,.nist-social--flickr:focus,.nist-social--flickr:hover {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/flickr_white.svg);
+}
+
+.nist-social--flickr-white:focus,.nist-social--flickr-white:hover {
+   background-color:#0063dc;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/flickr_white.svg);
+   opacity:1;
+}
+
+.nist-social__wrapper--block .nist-social--twitter {
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/twitter_white.svg);
+}
+
+.nist-social__wrapper--block .nist-social--twitter:focus,.nist-social__wrapper--block .nist-social--twitter:hover {
+   background-color:#49c9f2;
+   background-image:url(http://pages.nist.gov/IREX10/images/socialIcons/twitter_white.svg);
+   opacity:1;
+}
 
 /* Overall properties of the footer */
-.nist-footer
-{
+.nist-footer {
    position:absolute;
    left:0px;
    margin-top:0px;
@@ -215,21 +423,20 @@ html{
    padding:20px;
 }
 
-.nist-footer a,.nist-footer a:visited
-{
+.nist-footer a,.nist-footer a:visited {
    color:#fff;
 }
 
-.nist-footer a.usa-current{color:#c7a97b;}
+.nist-footer a.usa-current {
+   color:#c7a97b;
+}
 
-.nist-footer address
-{
+.nist-footer address {
    font-style:normal;
    padding:0px;
 }
 
-.nist-footer__feedback
-{
+.nist-footer__feedback {
    font-size:0.95rem;
    font-weight:700;
    background-color:#005ea2;
@@ -246,15 +453,13 @@ html{
    width:80px;
 }
 
-.nist-footer__nav
-{
+.nist-footer__nav {
    line-height: 250%;
    padding-bottom:2rem;
    padding-top:2rem;
 }
 
-.nist-footer__nav ul li
-{
+.nist-footer__nav ul li {
    align:center;
    display:inline-block;
    text-align:center;
@@ -262,8 +467,7 @@ html{
    margin-top:.5rem;
 }
 
-.nist-footer__nav ul
-{
+.nist-footer__nav ul {
    margin-bottom:0;
    margin-top:0;
    list-style-type:none;
@@ -271,14 +475,12 @@ html{
    text-align:center;
 }
 
-.nist-footer__nav ul>li
-{
+.nist-footer__nav ul>li {
    margin-bottom:0;
    max-width:unset;
 }
 
-.nist-footer__nav ul li a
-{
+.nist-footer__nav ul li a {
    display:inline-block;
    text-decoration:none;
    white-space:nowrap;
