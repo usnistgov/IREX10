@@ -16,6 +16,11 @@ HTML {
    -webkit-text-size-adjust:100%;
 }
 
+/* Overall properties of the header */
+.nist-header {
+   background-color:#000000;
+   padding:10px;
+}
 
 H1,H2,H3,H4,H5,H6 {
    line-height:1.12707; font-weight:700; font-stretch:semi-condensed;
@@ -145,12 +150,6 @@ H2 {
        format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-BoldItalic.woff)
        format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-BoldItalic.ttf)
        format("truetype");
-}
-
-/* Overall properties of the header */
-.nist-header {
-   background-color:#000000;
-   padding:10px;
 }
 
 .usa-button {
