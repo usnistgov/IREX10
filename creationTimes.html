@@ -13,7 +13,7 @@
 
 
 
-<title>DET Results</title>
+<title>IREX 10: Identification Track</title>
 
 
 
@@ -23,8 +23,8 @@ allbordercolors={0 0 0}
 
 
 
-<link rel="stylesheet" href="http://pages.nist.gov/IREX10/nist.css" type="text/css" />
-<link rel="stylesheet" href="http://pages.nist.gov/IREX10/irex10.css" type="text/css" />
+<link rel="stylesheet" href="nist.css" type="text/css" />
+<link rel="stylesheet" href="irex10.css" type="text/css" />
 
 
 
@@ -55,37 +55,13 @@ allbordercolors={0 0 0}
 
 
 
-<h1 class="title toc-ignore">DET Results</h1>
+<h1 class="title toc-ignore">IREX 10: Identification Track</h1>
 
 
 
-<!-- Display social media icons just under the title -->
-<P style="text-align:left;">
-<!--
-   HTML code that displays the four social media icon links (facebook, LinkedIn, Twitter, and email).
-   Last updated: 11/25/2019
--->
-<TABLE width="100%" style="margin-top:-20px" border="0">
-<TR>
-<TD width="500px">
-<A style="padding-right:6px"
-      href="https://www.nist.gov/programs-projects/irex-10-identification-track">IREX 10 Homepage</A> | <A style="padding-left:6px;padding-right:6px"
-      href="https://usnistgov.github.io/IREX10/API/class_irex_1_1_interface.html">API</A> | <A style="padding-left:6px;padding-right:6px"
-      href="https://www.nist.gov/itl/iad/ig/irex-10-frequently-asked-questions">FAQ</A> | <A style="padding-left:6px;padding-right:6px"
-      href="https://www.nist.gov/system/files/documents/2019/10/03/irex10_1n_conops.pdf">CONOPS Document</A>
-</TD>
-<TD align="right">
-<!-- Social media icons. -->
-<A class="nist-social nist-social--twitter-gray"   href="https://twitter.com/NIST"/> <A class="nist-social nist-social--facebook-gray"  href="https://www.facebook.com/NIST"/> <A class="nist-social nist-social--linkedin-gray"  href="https://www.linkedin.com/company/nist"/> <A class="nist-social nist-social--instagram-gray" href="https://www.instagram.com/nist/"/> <A class="nist-social nist-social--youtube-gray"   href="https://www.youtube.com/NIST"/> <A class="nist-social nist-social--rss-gray"       href="https://www.nist.gov/news-events/nist-rss-feeds"/> <A class="nist-social nist-social--envelope-gray"  href="https://service.govdelivery.com/accounts/USNIST/subscriber/new"/>
-</DIV>
-</TD>
-</TR>
-</TABLE>
-<P style="margin-bottom:-20px"></P>
-</P>
-<div id="det-plot" class="section level2">
-<h2>DET Plot</h2>
-<p>Core accuracy for the identification task can be characterized by <A href="https://www.nist.gov/itl/iad/ig/irex-10-performance-metrics">Detection-error trade-off (DET) plots</A>. Generally, curves lower down in a DET plot correspond to more accurate matchers.</p>
+<div id="creation-times" class="section level2">
+<h2>Creation Times</h2>
+<p>Computation times are measured as the the elapsed real time (i.e., “wall clock” time) as opposed to CPU time. Timing estimates were computed on unloaded machines with only a single process dedicated to biometric operations. The test machines are <A href="https://www.dell.com/downloads/global/products/pedge/M910_Spec_Sheet.pdf">Dell PowerEdge M910</A> blades with Dual Intel Xeon X7560 2.3 GHz CPUs (eight cores per processor).</p>
 <TABLE style="margin-bottom:20px;font-size:15px;line-height:1">
 <TR>
 <TD>
@@ -108,7 +84,7 @@ Samples used:
 Enrolled Population:
 </TD>
 <TD>
-<B><I>500K distinct eyes</I></B>
+<B><I>500K people</I></B>
 </TD>
 </TR>
 <TR>
@@ -116,38 +92,21 @@ Enrolled Population:
 Enrollment Method:
 </TD>
 <TD>
-<B><I>All enrollment sessions per person</I></B>
+<B><I>One enrollment session per person</I></B>
 </TD>
 </TR>
 <TR>
 <TD>
-Number of Mated Searches:
+Number of Searches:
 </TD>
 <TD>
-<B><I>335 202</I></B>
-</TD>
-</TR>
-<TR>
-<TD>
-Number of Nonmated Searches:
-</TD>
-<TD>
-<B><I>360 072</I></B>
+<B><I>NULL</I></B>
 </TD>
 </TR>
 </TABLE>
-<CENTER>
 <P style="margin-left:30px">
-<img src="DET_files/figure-html/unnamed-chunk-3-1.png" width="768" />
+<img src="creationTimes_files/figure-html/unnamed-chunk-2-1.png" width="768" />
 </P>
-</CENTER>
-</div>
-<div id="fnir-boxplots" class="section level2">
-<h2>FNIR Boxplots</h2>
-<p>DET plots do not convey information on the <A href="https://nvlpubs.nist.gov/nistpubs/ir/2018/NIST.IR.8207.pdf#page=46">uncertainty</A> of the error metrics</A>. The figure below shows 90% confidence bounds for FNIR at an FPIR of <span class="math inline">0.01</span>.</p>
-<CENTER>
-<img src="DET_files/figure-html/unnamed-chunk-5-1.png" width="768" />
-</CENTER>
 </div>
 
 
