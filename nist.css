@@ -502,6 +502,7 @@ H2 {
 }
 
 .nist-footer__nav ul li a {
+   color:white;
    display:inline-block;
    text-decoration:none;
    white-space:nowrap;
