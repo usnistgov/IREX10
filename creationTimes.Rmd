@@ -1,0 +1,73 @@
+---
+title: "IREX 10: Identification Track"
+output:
+   html_document:
+      self_contained: no
+      fig_caption: yes
+      number_sections: false
+      includes:
+         before_body: header.html
+         after_body: footer.html
+      css: ['nist.css', 'irex10.css']
+      theme: null
+      highlight: null
+      mathjax: null
+header-includes:
+   - \usepackage{svg} 
+   - \hypersetup{colorlinks=true}
+   - allbordercolors={0 0 0}
+params:
+   test: 'ops4/timing'
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(irex10)
+library(knitr)
+library(DT)           # for interactive tables
+options(scipen = 9)   # discourage conversion of raw numbers to scientific notation.
+
+test <- params$test
+
+matchers <- setdiff(matchers, c('Stub/20190820', 'Sift/20190820', 'Flynn/20200102',
+                                'Idemia/20191203'))
+
+size <- "500K people" # -GW
+eyes <- "Both eyes"   # -GW
+enrollment.mode <- 'One enrollment session per person' # -GW
+
+search.file <- get.property(test, 'Input CSV', 'search')
+searches    <- fread(search.file, fill = TRUE, sep = " ", header = FALSE)$V1
+
+num.searches <- format(nrow(searches), big.mark = '\u2006', small.mark = '\u2006',
+                       scientific = FALSE, format = 'f')
+```
+
+<!-- Display social media icons just under the title -->
+```{r child = 'socialMediaIcons.html'}
+```
+
+## Creation Times
+
+Computation times are measured as the the elapsed real time (i.e., "wall clock" time) as opposed to CPU time. Timing estimates were computed on unloaded machines with only a single process dedicated to biometric operations. The test machines are
+<A href="https://www.dell.com/downloads/global/products/pedge/M910_Spec_Sheet.pdf">Dell PowerEdge M910</A> blades with Dual Intel Xeon X7560 2.3 GHz CPUs (eight cores per processor).
+
+<TABLE style='margin-bottom:20px;font-size:15px;line-height:1'>
+ <TR><TD>Dataset:</TD><TD><A href=''><B><I>Operational Dataset 4</I></B></A></TD></TR>
+ <TR><TD>Samples used:</TD><TD><B><I>`r eyes`</I></B></TD></TR>
+ <TR><TD>Enrolled Population:</TD><TD><B><I>`r size`</I></B></TD></TR>
+ <TR><TD style='margin-bottom:5px'>Enrollment Method:</TD><TD><B><I>`r enrollment.mode`</I></B></TD></TR>
+ <TR><TD>Number of Searches:</TD><TD><B><I>`r num.searches`</I></B></TD></TR>
+</TABLE>
+
+<P style='margin-left:30px'>
+```{r fig.width = 8, fig.height = 2}
+# Search statistics.
+data  <- SJ(test = "ops4/timing", matcher = matchers)
+data <- data[, get.template.stats(test, matcher), by = .(test, matcher)]
+
+boxplot.template.times(data)
+```
+</P>
+

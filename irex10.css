@@ -1,13 +1,4 @@
 
-/* Watermark
-BODY
-{
-  background-image: url(http://i.bnet.com/blogs/watermark.jpg);
-  background-attachment: fixed;
-  background-position: 100% 100%;
-}
-*/
-
 .toplink
 {
    padding-left:1rem;
@@ -22,3 +13,17 @@ div.dt-buttons
    text-align:right;
 }
 
+#TOC li a
+{
+   color: #8B7993;
+}
+
+#TOC li
+{
+   display: inline;
+}
+
+#TOC li::after
+{
+   content: ' \00a0 ';
+}
