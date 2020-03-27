@@ -1,4 +1,9 @@
 
+body .main-container
+{
+   max-width: 800px;
+}
+
 .toplink
 {
    padding-left:1rem;
@@ -34,7 +39,7 @@ div.dt-buttons
 }
 
 .list-group-item:hover, .list-group-item:focus {
-    background-color: #f5f5f5;
+    background-color: #dddddd;
 }
 
 .list-group-item.active:hover {

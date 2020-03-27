@@ -37,61 +37,6 @@ H2 {
 }
 
 @font-face {
-   font-family:Source Sans Pro Web;
-   font-style:normal;
-   font-weight:400;
-   font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-light-webfont.woff2)
-       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-regular-webfont.woff)
-       format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-regular-webfont.ttf)
-       format("truetype");
-}
-
-@font-face {
-   font-family:Source Sans Pro Web;
-   font-style:normal;
-   font-weight:699;
-   font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.woff2)
-       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.woff)
-       format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bold-webfont.ttf)
-       format("truetype");
-}
-
-@font-face {
-   font-family:Source Sans Pro Web;
-   font-style:italic;
-   font-weight:400;
-   font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.woff2)
-       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.woff)
-       format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-italic-webfont.ttf)
-       format("truetype");
-}
-
-@font-face {
-   font-family:Source Sans Pro Web;
-   font-style:italic;
-   font-weight:600;
-   font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.woff2)
-       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.woff)
-       format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-semibolditalic-webfont.ttf)
-       format("truetype");
-}
-
-@font-face {
-   font-family:Source Sans Pro Web;
-   font-style:italic;
-   font-weight:700;
-   font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.woff2)
-       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.woff)
-       format("woff"),url(http://pages.nist.gov/IREX10/fonts/sourcesanspro-bolditalic-webfont.ttf)
-       format("truetype");
-}
-
-@font-face {
    font-family:Merriweather Web;
    font-style:normal;
    font-weight:300;
@@ -99,18 +44,6 @@ H2 {
    src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.woff2)
        format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.woff)
        format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Light.ttf)
-       format("truetype");
-}
-
-/* -GW repeats? */
-@font-face {
-   font-family:Merriweather Web;
-   font-style:normal;
-   font-weight:400;
-   font-display:fallback;
-   src:url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.woff2)
-       format("woff2"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.woff)
-       format("woff"),url(http://pages.nist.gov/IREX10/fonts/Latin-Merriweather-Regular.ttf)
        format("truetype");
 }
 
