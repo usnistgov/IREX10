@@ -111,7 +111,7 @@ void createTemplates(const std::shared_ptr<Irex::Interface> implementation,
    {
       IrisImage iris = readImage(imagePath);
 
-      if (imagePath == "images/enrollment8.pgm")
+      if (imagePath == "./images/enrollment8.pgm")
       {
          // Provide iris coordinates.
          iris.location.limbusCenterX = 320;
@@ -241,18 +241,20 @@ int main(int argc, char** argv)
       ret = implementation->identify(searchTemplate.enrollmentTemplate, numCandidates, candidates);
 
       if (ret.code == ReturnCode::FormatError ||
-          ret.code == ReturnCode::IdentError  ||
           ret.code == ReturnCode::ParticipantError)
       {  
          cerr << "Fatal Error during searching." << endl;
          return EXIT_FAILURE;
       }
 
-      // Write candidates to standard output.
-      for (const auto& c : candidates)
+      if (ret.code != ReturnCode::IdentError)
       {
-         cout << searchTemplate.id << " " << c.id << " " << c.distance << " "
-              << static_cast<int>(ret.code) << endl;
+         // Write candidates to standard output.
+         for (const auto& c : candidates)
+         {
+            cout << searchTemplate.id << " " << c.id << " " << c.distance << " "
+                 << static_cast<int>(ret.code) << endl;
+         }
       }
 
    } // end foreach search
