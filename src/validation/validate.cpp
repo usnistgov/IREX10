@@ -122,7 +122,7 @@ void createTemplates(const std::shared_ptr<Irex::Interface> implementation,
 
       std::vector<IrisImage> irides(1, iris);
 
-      if (imagePath == "images/search1.pgm")
+      if (imagePath == "./images/search1.pgm")
       {
          // Test two-eye support.
          std::reverse(iris.data.begin(), iris.data.end());
