@@ -17,7 +17,7 @@
 #include <algorithm>
 #include <dirent.h>
 
-const static int numCandidates = 10;
+const static int numCandidates = 1098;
 
 using std::string;
 using std::cerr;
@@ -111,20 +111,11 @@ void createTemplates(const std::shared_ptr<Irex::Interface> implementation,
    {
       IrisImage iris = readImage(imagePath);
 
-      if (imagePath == "./images/enrollment8.pgm")
-      {
-         // Provide iris coordinates.
-         iris.location.limbusCenterX = 320;
-         iris.location.limbusCenterY = 240;
-         iris.location.limbusRadius  = 119;
-         iris.location.pupilRadius   = 38;
-      }
-
       std::vector<IrisImage> irides(1, iris);
 
-      if (imagePath == "./images/search1.pgm")
+      if (imagePath == "./images/Quinn.pgm")
       {
-         // Test two-eye support.
+         // Test two-eye support by addding flipped version of iris as second image.
          std::reverse(iris.data.begin(), iris.data.end());
          irides.push_back(iris);
 
@@ -180,12 +171,12 @@ int main(int argc, char** argv)
    std::vector<string> searchImages,
                        enrollmentImages;
 
-   // Get list of search and enroll images.
+   // Get list of search images.
    DIR* dir;
 
-   if ((dir = opendir ("./images/")) == NULL)
+   if ((dir = opendir ("./images/search")) == NULL)
    {
-      cerr << "Can't read images directory" << endl;
+      cerr << "Can't read images directory. Check if you unzipped the validation images." << endl;
       return EXIT_FAILURE;
    }
 
@@ -195,13 +186,26 @@ int main(int argc, char** argv)
    {
       const std::string filename(entry->d_name);
 
-      if (filename.rfind("search", 0) == 0)
-         searchImages.push_back("./images/" + filename);
-      else if (filename.rfind("enroll", 0) == 0)
-         enrollmentImages.push_back("./images/" + filename);
+      if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0)
+         searchImages.push_back("./images/search/" + filename);
    }
 
    closedir(dir);
+
+   // Get list of enrollment images.
+   if ((dir = opendir ("./images/enroll")) == NULL)
+   {
+      cerr << "Can't read images directory" << endl;
+      return EXIT_FAILURE;
+   }
+
+   while ((entry = readdir (dir)) != NULL)
+   {
+      const std::string filename(entry->d_name);
+
+      if (strcmp(entry->d_name, ".") != 0 && strcmp(entry->d_name, "..") != 0)
+         enrollmentImages.push_back("./images/enroll/" + filename);
+   }
 
    std::shared_ptr<Irex::Interface> implementation = Irex::Interface::getImplementation();
 
