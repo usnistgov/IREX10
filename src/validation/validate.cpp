@@ -12,6 +12,7 @@
 #include <iostream>
 #include <fstream>
 #include <csignal>
+#include <cstring>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <algorithm>
@@ -113,7 +114,7 @@ void createTemplates(const std::shared_ptr<Irex::Interface> implementation,
 
       std::vector<IrisImage> irides(1, iris);
 
-      if (imagePath == "./images/Quinn.pgm")
+      if (imagePath == "./images/search/Quinn.pgm")
       {
          // Test two-eye support by addding flipped version of iris as second image.
          std::reverse(iris.data.begin(), iris.data.end());

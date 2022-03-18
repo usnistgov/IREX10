@@ -1,11 +1,14 @@
 #!/bin/bash
 
 # Check version of OS.
-recommendedOS="CentOS Linux release 7.6.1810 (Core) "
-currentOS=$(cat /etc/centos-release)
-if [ "$currentOS" != "$recommendedOS" ]
+
+reqOS="Ubuntu 20.04.3 LTS"
+currentOS=$(lsb_release -a 2> /dev/null | grep "Description" | awk -F":" '{ print $2 }' | sed -e 's/^[[:space:]]*//')
+
+if [ "$reqOS" != "$currentOS" ]
 then
-	echo "[WARNING] You are not building on $recommendedOS."
+   echo "${bold}[ERROR] You are not running the correct version of the operating system, which should be $reqOS.  Please install the correct operating system and re-run this validation package.${normal}"
+   exit
 fi
 
 # Build implementation library.
