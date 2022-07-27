@@ -7,7 +7,7 @@ CXXFLAGS=-fPIC -std=c++11 $(INC_PATHS) $(LIB_PATHS)
 all: ../../validate
 
 ../../validate: validate.cpp
-	$(CXX) $(CXXFLAGS) -l IREX10 validate.cpp -o $@
+	$(CXX) $(CXXFLAGS) validate.cpp -l IREX10 -o $@
 clean:
 	rm -f ../../validate
 
