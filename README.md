@@ -10,4 +10,4 @@ Validation is the process of ensuring a participant's submission is functioning 
 To produce validation output and prepare your submission, first get the password to decrypt the validation images by emailing [irex@nist.gov](mailto:irex@nist.gov), then place your library file in the current directory and execute ./validate.sh and follow the instructions.
 
 # Notes
-NIST will test submissions on CentOS 7.6 (gcc version 4.8.5), downloadable from http://nigos.nist.gov:8080/evaluations/CentOS-7-x86_64-Everything-1810.iso 
+NIST will test submissions on Ubuntu 20.04 (gcc version 9.3.0), downloadable from https://nigos.nist.gov/evaluations/ubuntu-20.04.3-live-server-amd64.iso
