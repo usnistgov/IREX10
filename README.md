@@ -2,7 +2,7 @@
 # IREX
 IREX 10 is a continuing evaluation of automated iris recognition technology.  Administered at the Image Group's Biometrics Research Laboratory (BRL), developers submit their matching software for analysis over sequestered test data.  As an ongoing evaluation, developers may submit their software at any time.
 
-[IREX 10 Homepage](https://www.nist.gov/programs-projects/irex-10-identification-track/)
+[IREX 10 Homepage](https://www.nist.gov/programs-projects/iris-exchange-irex-10-ongoing-evaluation-iris-recognition)
 
 # Validation 
 Validation is the process of ensuring a participant's submission is functioning properly on NIST's test machines. It involves running the submission over a set of data and verifying it matches the output provided by the participant.
