@@ -2,7 +2,7 @@
 /*
 body .main-container
 {
-   max-width: 800px;
+   max-width: 900px;
 }
 */
 
@@ -26,7 +26,7 @@ div.dt-buttons
 {
    min-width: 1100px;
    max-width: 1100px;
-   width: 1100px;
+   width: 1200px;
 }
 */
 
@@ -79,7 +79,14 @@ H1,H2,H3,H4,H5,H6 {
    font-stretch:semi-condensed;
 }
 
-H1 { font-size:2.66176rem; }
+H1 {
+   font-size:3rem;
+   border-bottom:2px solid #005ea2;
+   font-weight:400;
+   padding-bottom:0.25rem;
+   margin-bottom:0.5rem;
+   clear:both;
+}
 
 H2 {
    font-size:2rem;
@@ -96,5 +103,6 @@ H5 { font-size:0.99816rem; }
 
 <!-- For demographic tabbed sections --> 
 #demographic-factors { display: inline }
+summary H1           { display: inline; }
 summary H2           { display: inline; }
 summary DIV          { display: inline; }
