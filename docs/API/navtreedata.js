@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "FRVT/IREX Ongoing", "index.html", [
+  [ "FRTE/IREX Ongoing", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Members", "functions.html", [
